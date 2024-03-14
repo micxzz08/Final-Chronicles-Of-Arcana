@@ -1,0 +1,120 @@
+[gd_scene load_steps=8 format=3 uid="uid://dayegjfe7cwvf"]
+
+[ext_resource type="Script" path="res://src/CreditScene/CreditScene.gd" id="1_3w44l"]
+[ext_resource type="FontFile" uid="uid://byoc2ndsx7cer" path="res://src/Controller/ui/nokiafc22.ttf" id="2_10nrc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_33w2g"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Theme" id="Theme_o1pae"]
+Panel/styles/panel = SubResource("StyleBoxFlat_33w2g")
+
+[sub_resource type="Theme" id="Theme_tm1p0"]
+Label/font_sizes/font_size = 8
+Label/fonts/font = ExtResource("2_10nrc")
+
+[sub_resource type="Theme" id="Theme_jeifs"]
+Label/font_sizes/font_size = 16
+Label/fonts/font = ExtResource("2_10nrc")
+
+[sub_resource type="Theme" id="Theme_ck2d1"]
+Button/fonts/font = ExtResource("2_10nrc")
+
+[node name="CreditScene" type="Node2D"]
+script = ExtResource("1_3w44l")
+
+[node name="VScrollBar" type="VScrollBar" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="Panel" type="Panel" parent="VScrollBar"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(28.7502, 18.5914)
+theme = SubResource("Theme_o1pae")
+
+[node name="Label" type="Label" parent="VScrollBar/Panel"]
+layout_mode = 0
+offset_left = 13.4955
+offset_top = 4.89473
+offset_right = 232.496
+offset_bottom = 53.8947
+scale = Vector2(0.0551961, 0.148411)
+theme = SubResource("Theme_tm1p0")
+text = "Michael Lameg - Programmer/Team Leader
+Franz Gian Lee Estrada - Programmer
+Denz Tumbaga - Researcher
+Charles Bautista - Document Writer"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="VScrollBar/Panel"]
+layout_mode = 0
+offset_left = 11.1999
+offset_top = 1.07577
+offset_right = 133.2
+offset_bottom = 24.0758
+scale = Vector2(0.141967, 0.169934)
+theme = SubResource("Theme_jeifs")
+text = "Credit Scene"
+
+[node name="Label3" type="Label" parent="VScrollBar/Panel"]
+layout_mode = 0
+offset_left = 13.7042
+offset_top = 28.2926
+offset_right = 266.704
+offset_bottom = 77.2926
+scale = Vector2(0.04463, 0.151396)
+theme = SubResource("Theme_tm1p0")
+text = "Background Music
+Adhesive Combat - NightShade
+Littleroot Town - Pokemon
+Boss Fight - Azali"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="VScrollBar/Panel"]
+layout_mode = 0
+offset_left = 11.6173
+offset_top = 17.7501
+offset_right = 264.617
+offset_bottom = 92.7501
+scale = Vector2(0.0576761, 0.122091)
+theme = SubResource("Theme_tm1p0")
+text = "Sound Effects
+Sword Slash -Sound Treasures
+Hadouken -Street Fighter
+Slime Sound - Minecraft
+Skeleton Hurt - Minecraft
+Zombie Hurt - Minecraft"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="VScrollBar/Panel"]
+layout_mode = 0
+offset_left = 11.6173
+offset_top = 9.30537
+offset_right = 264.617
+offset_bottom = 84.3054
+scale = Vector2(0.0585485, 0.164309)
+theme = SubResource("Theme_tm1p0")
+text = "Objectives and  Characters
+Arts - Itch.io"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="VScrollBar/Panel"]
+layout_mode = 0
+offset_left = 35.1997
+offset_top = 31.6275
+offset_right = 83.1997
+offset_bottom = 62.6275
+scale = Vector2(0.0855829, 0.0829019)
+theme = SubResource("Theme_ck2d1")
+text = "Skip"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(578, 330)
+
+[connection signal="pressed" from="VScrollBar/Panel/Button" to="." method="_on_button_pressed"]

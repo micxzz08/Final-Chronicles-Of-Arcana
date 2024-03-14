@@ -1,0 +1,13 @@
+~ eq2
+Chest of Truth: [[Hi|Hello|Howdy]], here is a web development question.
+Chest of Truth: What is the main purpose of CSS in web development?
+- To define the structure and content of a web page
+	Chest of Truth: Correct! CSS is used to define the presentation and styling of a web page's content. Well done!
+	=> END
+- To manage server-side data storage
+	Chest of Truth: That's not quite right. CSS is primarily used for styling web pages, not data storage. Want to try again?
+	- Yes
+		=> eq2
+	- No
+		=> END
+=> END

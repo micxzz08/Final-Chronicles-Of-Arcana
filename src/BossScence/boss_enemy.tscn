@@ -1,0 +1,96 @@
+[gd_scene load_steps=12 format=3 uid="uid://gsuytl5hiv0r"]
+
+[ext_resource type="Script" path="res://src/BossScence/boss_enemy.gd" id="1_bumrn"]
+[ext_resource type="Texture2D" uid="uid://b73ahf265xj3k" path="res://assets/sprites/characters/vampire/v2/vampire_v2_1.png" id="1_k5wev"]
+[ext_resource type="Texture2D" uid="uid://dlvh0mk2os3fv" path="res://assets/sprites/characters/vampire/v2/vampire_v2_2.png" id="2_x8wvy"]
+[ext_resource type="Texture2D" uid="uid://do72rso83o5lq" path="res://assets/sprites/characters/vampire/v2/vampire_v2_3.png" id="3_pkqyb"]
+[ext_resource type="Texture2D" uid="uid://clmqsof1i6gfk" path="res://assets/sprites/characters/vampire/v2/vampire_v2_4.png" id="4_oexuv"]
+[ext_resource type="AudioStream" uid="uid://cjfc72ec8ofrn" path="res://assets/sfx/boss_hurt.mp3" id="6_j0xb1"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4wk61"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_k5wev")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_x8wvy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_pkqyb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_oexuv")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_h1q5j"]
+radius = 90.0222
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_aaxnd"]
+radius = 69.0072
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qv6mm"]
+radius = 70.0071
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wsiyx"]
+radius = 281.028
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_bumrn")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-3, -17)
+scale = Vector2(8.57814, 9.97655)
+sprite_frames = SubResource("SpriteFrames_4wk61")
+frame_progress = 0.454123
+
+[node name="take_damage_cooldown" type="Timer" parent="."]
+wait_time = 0.5
+
+[node name="detection" type="Area2D" parent="."]
+y_sort_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="detection"]
+y_sort_enabled = true
+position = Vector2(1, -11)
+shape = SubResource("CircleShape2D_h1q5j")
+
+[node name="enemy_hitbox" type="Area2D" parent="."]
+y_sort_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy_hitbox"]
+position = Vector2(1, -15)
+shape = SubResource("CircleShape2D_aaxnd")
+
+[node name="healthbar" type="ProgressBar" parent="."]
+modulate = Color(0.8, 0.0745098, 0.172549, 1)
+offset_left = -103.0
+offset_top = -175.0
+offset_right = 107.0
+offset_bottom = -139.0
+max_value = 1000.0
+show_percentage = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, -16)
+shape = SubResource("CircleShape2D_qv6mm")
+
+[node name="hurt" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_j0xb1")
+
+[node name="story" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="story"]
+position = Vector2(2, -10)
+shape = SubResource("CircleShape2D_wsiyx")
+
+[connection signal="timeout" from="take_damage_cooldown" to="." method="_on_take_damage_cooldown_timeout"]
+[connection signal="body_entered" from="detection" to="." method="_on_detection_body_entered"]
+[connection signal="body_exited" from="detection" to="." method="_on_detection_body_exited"]
+[connection signal="body_entered" from="enemy_hitbox" to="." method="_on_enemy_hitbox_body_entered"]
+[connection signal="body_exited" from="enemy_hitbox" to="." method="_on_enemy_hitbox_body_exited"]
+[connection signal="body_entered" from="story" to="." method="_on_story_body_entered"]

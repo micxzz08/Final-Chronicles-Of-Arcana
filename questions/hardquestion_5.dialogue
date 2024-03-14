@@ -1,0 +1,18 @@
+~ hq5
+
+Chest of Truth: [[Hi|Hello|Howdy]], Here's a question for you:
+Chest of Truth: What is the result of adding "2" + "2" in JavaScript?
+-  "22"
+	Chest of Truth: You got it right! In JavaScript, when you add "2" + "2", the result is "22". Well done!
+	- Great! => END
+- "4"
+	Chest of Truth: That's not correct. The addition of "2" + "2" in JavaScript results in "22", not "4". Want to try again?
+	- Try again => hq5
+- "42"
+	Chest of Truth: That's not the correct answer. When you add "2" + "2" in JavaScript, the result is "22", not "42". Would you like to give it another try?
+	- Try again => hq5
+- "6"
+	Chest of Truth: That's not correct. The result of adding "2" + "2" in JavaScript is "22", not "6". Would you like to try again?
+	- Try again => hq5
+
+=> END

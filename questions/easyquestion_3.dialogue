@@ -1,0 +1,16 @@
+~ eq3
+
+Chest of Truth: [[Hi|Hello|Howdy]], here is a web development question.
+Chest of Truth: What is the primary function of HTML in web development?
+- To create interactive animations
+	Chest of Truth: That's not quite right. HTML is mainly used for structuring web content, not creating animations. Want to try again?
+	- Yes
+		=> eq3
+	- No
+		=> END
+- To define the structure and content of a web page
+	Chest of Truth: Correct! HTML is used to define the structure and content of web pages. Great job!
+	=> END
+Nathan: For more information see the online documentation.
+
+=> END

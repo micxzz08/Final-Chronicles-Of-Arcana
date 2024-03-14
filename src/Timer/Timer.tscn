@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://b31uklu5d8df5"]
+
+[ext_resource type="Script" path="res://src/Timer/Timer.gd" id="1_6l1gr"]
+
+[sub_resource type="Theme" id="Theme_abkom"]
+RichTextLabel/font_sizes/normal_font_size = 35
+
+[node name="RichTextLabel" type="RichTextLabel"]
+offset_right = 163.0
+offset_bottom = 40.0
+theme = SubResource("Theme_abkom")
+text = "starting..."
+scroll_active = false
+script = ExtResource("1_6l1gr")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

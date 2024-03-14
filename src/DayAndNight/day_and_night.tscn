@@ -1,0 +1,82 @@
+[gd_scene load_steps=6 format=3 uid="uid://c1ymwm6eoa7jq"]
+
+[ext_resource type="Script" path="res://src/DayAndNight/day_and_night.gd" id="1_mghxp"]
+
+[sub_resource type="Animation" id="Animation_chmyc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0.109804, 0.741176)]
+}
+
+[sub_resource type="Animation" id="Animation_6ednq"]
+resource_name = "day_to_night"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0.109804, 0), Color(0, 0, 0.109804, 0.741176)]
+}
+
+[sub_resource type="Animation" id="Animation_6td8l"]
+resource_name = "night_to_day"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0.109804, 0.741176), Color(0, 0, 0.109804, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_t4et4"]
+_data = {
+"RESET": SubResource("Animation_chmyc"),
+"day_to_night": SubResource("Animation_6ednq"),
+"night_to_day": SubResource("Animation_6td8l")
+}
+
+[node name="day_and_night" type="StaticBody2D"]
+scale = Vector2(-1.3607, -2.76624)
+script = ExtResource("1_mghxp")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = 120
+offset_left = -6610.0
+offset_top = -1580.0
+offset_right = -3166.0
+offset_bottom = 1340.0
+scale = Vector2(1887.2, 8.84718)
+color = Color(0, 0, 0.109804, 0.741176)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_t4et4")
+}
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 10.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

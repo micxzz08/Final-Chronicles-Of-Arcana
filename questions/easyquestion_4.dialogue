@@ -1,0 +1,15 @@
+~ eq4
+
+Chest of Truth: [[Hi|Hello|Howdy]], here is a web development question.
+Chest of Truth: What is JavaScript primarily used for in web development?
+- To add interactivity and dynamic behavior to websites
+	Chest of Truth: You got it right! JavaScript is primarily used to add interactivity and dynamic behavior to websites. Well done!
+	=> END
+- To create web page layouts and styles
+	Chest of Truth: Not quite. While JavaScript can manipulate styles and layouts, its primary role is to add interactivity and behavior. Want to give it another try?
+	- Yes
+		=> eq4
+	- No
+		=> END
+
+=> END

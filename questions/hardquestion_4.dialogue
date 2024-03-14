@@ -1,0 +1,26 @@
+~ hq4
+Chest of Truth: [[Hi there!|Hello!|Greetings!]], let's challenge your JavaScript skills with a `for` loop problem.
+Chest of Truth: Imagine you have an array of numbers and you want to calculate their sum. Which `for` loop structure should you use?
+- The correct `for` loop structure is:
+	Chest of Truth: You're absolutely right! To calculate the sum of numbers in an array, you can use a `for` loop. Great job!
+	=> END
+- You should use a `for...of` loop to calculate the sum of numbers in an array.
+	 Chest of Truth: Not quite. While a `for...of` loop is handy for iterating through elements, a traditional `for` loop is more suitable for calculating the sum. Want to try again?
+	- Yes
+		=> hq4
+	- No
+		=> END
+- Use a `while` loop for calculating the sum; it's more efficient.
+	Chest of Truth: That's not the most common approach for summing an array's elements. A `for` loop is a better choice for this task. Want to attempt the question again?
+	- Yes
+		=> hq4
+	- No
+		=> END
+- You can calculate the sum without using any loops in JavaScript.
+	Chest of Truth: It's possible to use array methods like `reduce` to calculate the sum, but the question is specifically about using a `for` loop. Want to try again?
+	- Yes
+		=> hq4
+	- No
+		=> END
+  
+=> END

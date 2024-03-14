@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=3 uid="uid://38c21mwv5j44"]
+
+[ext_resource type="Script" path="res://src/UltimateSkill/flame.gd" id="1_nl4hb"]
+[ext_resource type="Texture2D" uid="uid://dibtbkpqf8ffm" path="res://assets/2D Pixel Dungeon Asset Pack/items and trap_animation/flamethrower/flame.png" id="2_7s146"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_io47l"]
+radius = 8.11035
+
+[node name="flame" type="CharacterBody2D"]
+script = ExtResource("1_nl4hb")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(27, 20)
+scale = Vector2(1.875, 1.5)
+shape = SubResource("CircleShape2D_io47l")
+
+[node name="flame" type="Area2D" parent="."]
+position = Vector2(4.76837e-07, 3)
+scale = Vector2(1.875, 1.5)
+
+[node name="Sprite2D" type="Sprite2D" parent="flame"]
+z_index = 100
+position = Vector2(14.4, 12.6667)
+scale = Vector2(0.0841668, 0.109375)
+texture = ExtResource("2_7s146")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="flame"]
+position = Vector2(14.4, 11.3333)
+shape = SubResource("CircleShape2D_io47l")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(28, 22)
+scale = Vector2(1.8125, 2.05)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+
+[connection signal="body_entered" from="flame" to="." method="_on_flame_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

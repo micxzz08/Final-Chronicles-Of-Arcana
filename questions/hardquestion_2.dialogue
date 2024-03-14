@@ -1,0 +1,15 @@
+~ hq2
+
+Chest of Truth: [[Hi|Hello|Howdy]], here's a more challenging web development question for you:
+Chest of Truth: What is the purpose of the viewport meta tag in HTML
+- The viewport meta tag defines the color palette for a web page
+	Chest of Truth: That's not quite right. The viewport meta tag is primarily related to controlling how web pages are displayed on different devices. Would you like to try again?
+	- Yes
+		=> hq2
+	- No
+		=> END
+- It is used to control the initial layout and zoom level for a web page on mobile devices.
+	Chest of Truth: Impressive! You're correct. The viewport meta tag is crucial for responsive web design, allowing web pages to display correctly on various devices.
+	=> END
+
+=> END

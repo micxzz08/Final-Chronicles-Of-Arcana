@@ -1,0 +1,27 @@
+~ hq3
+
+Chest of Truth: [[Hi there!|Hello!|Greetings!]], I have a JavaScript question for you.
+Chest of Truth: What is the purpose of the `if` statement in JavaScript?
+- The `if` statement is used to declare variables.
+	Chest of Truth: That's not quite correct. The primary purpose of the `if` statement is to make decisions in your code based on a condition. Want to try again?
+	- Yes
+		=> hq3
+	- No
+		=> END
+- The `if` statement is used to execute a block of code only if a specified condition evaluates to true.
+	Chest of Truth: Excellent! You're absolutely right. The `if` statement allows you to execute code based on a true condition.
+	=> END
+-  The `if` statement is used to loop through an array.
+	Chest of Truth: Not quite. While you can use loops for that, the `if` statement is primarily for making decisions based on conditions. Want to attempt the question again?
+	- Yes
+		=> hq3
+	- No
+		=> END
+- The `if` statement is used to define functions in JavaScript.
+	Chest of Truth: That's not correct. Function definitions are not the primary purpose of the `if` statement. It's about conditional execution. Would you like to try again?
+	- Yes 
+		=> hq3
+	- No
+		=> END
+
+=> END

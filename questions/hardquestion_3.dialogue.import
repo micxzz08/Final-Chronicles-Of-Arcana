@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_10"
+type="Resource"
+uid="uid://b3g1vpo865nup"
+path="res://.godot/imported/hardquestion_3.dialogue-f8ab7a424d9d19e7afcb8e8b361b4488.tres"
+
+[deps]
+
+source_file="res://questions/hardquestion_3.dialogue"
+dest_files=["res://.godot/imported/hardquestion_3.dialogue-f8ab7a424d9d19e7afcb8e8b361b4488.tres"]
+
+[params]
+
+defaults=true

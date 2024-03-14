@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_10"
+type="Resource"
+uid="uid://kh3s2pl7kvb5"
+path="res://.godot/imported/easyquestion_4.dialogue-ee3f670a294d7755749496d1ad48f533.tres"
+
+[deps]
+
+source_file="res://questions/easyquestion_4.dialogue"
+dest_files=["res://.godot/imported/easyquestion_4.dialogue-ee3f670a294d7755749496d1ad48f533.tres"]
+
+[params]
+
+defaults=true

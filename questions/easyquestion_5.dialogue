@@ -1,0 +1,15 @@
+~ eq5
+
+Chest of Truth: [[Hi|Hello|Howdy]], here is a web development question.
+Chest of Truth: What does the acronym "URL" stand for in web development?
+- Uniform Resource Locator
+	Chest of Truth: You're absolutely right! "URL" stands for "Uniform Resource Locator." Well done!
+	=> END
+- Universal Resource Locator
+	Chest of Truth: That's not quite correct. The correct acronym is "Uniform Resource Locator." Would you like to try again?
+	- Yes
+		=> eq5
+	- No
+		=> END
+
+=> END

@@ -1,0 +1,10 @@
+~ eq1
+Chest of Truth: [[Hi|Hello|Howdy]], here is a web development question.
+Chest of Truth: What does HTML stand for?
+- Hypertext Markup Language
+	Chest of Truth: You picked "Hypertext Markup Language." That's correct!
+	=> END
+- Hyper Testing for Market Landmasses
+	Chest of Truth: Wrong answer, please try again
+	=> eq1
+=> END

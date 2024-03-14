@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://ol0tqg3cnhjo"]
+
+[ext_resource type="Script" path="res://src/Lives/Lives.gd" id="1_fttep"]
+[ext_resource type="Texture2D" uid="uid://bu4ispc2spexp" path="res://assets/2D Pixel Dungeon Asset Pack/items and trap_animation/heart/heart.png" id="2_1qdau"]
+
+[node name="Lives" type="HBoxContainer"]
+offset_right = 168.0
+offset_bottom = 30.0
+script = ExtResource("1_fttep")
+
+[node name="1" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("2_1qdau")
+stretch_mode = 3
+
+[node name="2" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("2_1qdau")
+stretch_mode = 3
+
+[node name="3" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("2_1qdau")
+stretch_mode = 3
